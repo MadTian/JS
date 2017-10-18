@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+	}
+	
+	li{
+		list-style:none;
+	}
+	#list{
+		width: 100px;
+		border: 1px solid #ccc;
+		margin: 100px auto 0;
+	}
+	#up{
+		height: 24px;
+		background: url(img/down.gif) no-repeat 15px center;
+	}
+	#list a{
+		display: block;
+		width: 100px;
+		height: 24px;
+		text-align: center;
+		line-height: 24px;
+		text-decoration: none;
+		color: #333;
+	}
+	#down{
+		display: none;
+	}
+	#down a:hover{
+		background-color: #ccc;
+	}
+</style>
+</head>
+
+<body>
+
+	<div id="list">
+    	
+        <div id="up"><a href="javascript:;">购物</a></div>
+    	<ul id="down">
+        	<li><a href="javascript:;">水果</a></li>
+            <li><a href="javascript:;">蔬菜</a></li>
+            <li><a href="javascript:;">日用品</a></li>
+            <li><a href="javascript:;">百货</a></li>
+        </ul>
+    
+    </div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	//当鼠标移入up时，让down显示
+	//当鼠标离开list时，让down隐藏
+	//需要：up	down	list
+	var up=document.getElementById('up');
+	var down=document.getElementById('down');
+	var list=document.getElementById('list');
+	
+	//当鼠标移入up时，让down显示
+	//将up的背景图更改成上三角
+	up.onmouseenter=function(){
+		
+		down.style.display='block';
+		up.style.background='url(img/up.gif) no-repeat 15px center';
+		//up.style.backgroundImage='url(img/up.gif)';
+	
+	
+	}
+	
+	//当鼠标离开list时，让down隐藏
+	//将up的背景图还原成下三角
+	list.onmouseleave=function(){
+		
+		down.style.display='none';	
+		up.style.backgroundImage='url(img/down.gif)';
+		
+	}
+	
+</script>
+
+
+
+
+
+

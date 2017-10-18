@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+	}
+	
+	li{
+		list-style:none;
+		height: 30px;
+		border-bottom: 1px solid #000;
+		text-align: center;
+		line-height: 30px;
+		background-color: #ccc;
+	}
+	ul{
+		
+		width: 498px;
+		margin: 100px auto 0;
+		border: 1px solid #000;
+		border-bottom: none;
+	}
+	
+</style>
+</head>
+
+<body>
+	<ul>
+    	<li id="li1">单击事件</li>
+        <li id="li2">双击事件</li>
+        <li id="li3">鼠标移入事件</li>
+        <li id="li4">鼠标离开事件</li>	
+    </ul>
+</body>
+</html>
+<script type="text/javascript">
+	
+	//当单击li1时，弹出一句话
+	var li1=document.getElementById('li1');
+	//事件源.事件类型=执行指令
+	li1.onclick=function(){
+	
+		alert('单击事件捕获成功');
+	
+	}
+	
+	
+	//当双击li2时，弹出一句话
+	var li2=document.getElementById('li2');
+	//事件源.事件类型=执行指令
+	li2.ondblclick=function(){
+		
+		alert('双击事件捕获成功');
+		
+	}
+	
+	//当鼠标移入li3身上时，弹出一句话
+	var li3=document.getElementById('li3');
+	//事件源.事件类型=执行指令
+	li3.onmouseenter=function(){
+		
+		alert('鼠标移入事件捕获成功');
+		
+	}
+	
+	//当鼠标离开li4身上时，弹出一句话
+	var li4=document.getElementById('li4');
+	//事件源.事件类型=执行指令
+	li4.onmouseleave=function(){
+		
+		alert('鼠标离开事件捕获成功');
+		
+	}
+</script>
+
+
+
+
+
+

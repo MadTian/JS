@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: deepskyblue;
+		border: 1px solid #000;
+		display: none;
+	}
+
+</style>
+<script type="text/javascript">
+
+	window.onload=function(){
+		
+		//单击按钮1，显示盒子1
+		/*var btn1=document.getElementById('btn1');
+		var box1=document.getElementById('box1');
+		btn1.onclick=function(){
+			
+			box1.style.display='block';	
+			
+		}*/
+		
+		//单击按钮2，显示盒子2
+		/*var btn2=document.getElementById('btn2');
+		var box2=document.getElementById('box2');
+		btn2.onclick=function(){
+			
+			box2.style.display='block';	
+			
+		}*/
+		
+		//单击按钮3，显示盒子3
+		/*var btn3=document.getElementById('btn3');
+		var box3=document.getElementById('box3');
+		btn3.onclick=function(){
+			
+			box3.style.display='block';	
+			
+		}*/
+		
+		//单击按钮1，显示盒子1
+		//单击按钮2，显示盒子2
+		//单击按钮3，显示盒子3
+		//通用（单一）的功能：单击按钮X，显示盒子Y
+		function clickBtnShowBox(data1,data2){
+			
+			//在这个功能内，
+			//需要一个不断改变的按钮1 2 3	-->	需要不断改变的btn ID字符串		--> data1
+			//需要一个不断改变的盒子1 2 3	-->	需要不断改变的box ID字符串		-->	data2
+			//alert(data1);
+			//alert(data2);
+			
+			var changeBtn=document.getElementById(data1);
+			var changeBox=document.getElementById(data2);
+			changeBtn.onclick=function(){
+				
+				changeBox.style.display='block';	
+				
+			}
+			
+		}
+		
+		clickBtnShowBox('btn1','box1');
+		clickBtnShowBox('btn2','box2');
+		clickBtnShowBox('btn3','box3');
+		
+		
+		
+		
+	}
+
+
+
+</script>
+</head>
+
+<body>
+	<button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button>
+    <div id="box1">盒子1</div>
+    <div id="box2">盒子2</div>
+    <div id="box3">盒子3</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+	<button id="btn">按钮</button>
+</body>
+</html>
+<script type="text/javascript">
+	
+	
+
+	//函数创建后，必须用户调用才会被执行
+	//sayHi();	
+	//sayHi();
+	
+	
+	//说白了，匿名函数就是自定义函数一种，它完美继承了他爸爸的特性，所以也不会主动执行
+	
+	//封装一个“问好”功能
+	function sayHi(){
+	  
+	  alert('你好');
+	  
+	}
+	
+	var btn=document.getElementById('btn');
+	/*btn.onclick=function(){
+		
+		alert('你好');	
+		
+	}*/
+	btn.onclick=sayHi;
+	
+	
+</script>

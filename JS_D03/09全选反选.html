@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload=function(){
+
+            //获取两个数组
+            var btns=document.getElementsByTagName('button');
+            var inputs=document.getElementsByTagName('input');
+
+            //“全选”
+            btns[0].onclick=function(){
+
+               //需要让inputs数组中的每个input的checked=true（选中）
+               //想得到每一个input就去遍历数组
+               for (var i = 0; i < inputs.length; i++) {
+                   // inputs[i]    -->     每一个input
+                   
+                   inputs[i].checked=true;
+
+               };
+
+            }
+
+            //“取消全选”
+            btns[1].onclick=function(){
+
+                //需要让inputs数组中的每个input的checked=false（未选中）
+                for(var i=0; i<inputs.length; i++){
+
+                    inputs[i].checked=false;
+
+                }
+
+            }
+
+            //“反选”
+            btns[2].onclick=function(){
+
+                //得到每一个input本来的checked状态
+                for(var i=0; i<inputs.length; i++){
+
+                    //“反选”就是将本身的状态反转
+                    // alert( !inputs[i].checked );
+                    //将反转后的值 重新赋值 checked属性
+                    inputs[i].checked=!inputs[i].checked;
+
+                }
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+    <button>全选</button>
+    <button>取消全选</button>
+    <button>反选</button>
+    <br /><br />
+    <input type="checkbox" checked="checked" />
+    <br /><br />
+    <input type="checkbox" />
+    <br /><br />
+    <input type="checkbox" />
+    <br /><br />
+    <input type="checkbox" />
+    <br /><br />
+    <input type="checkbox" />
+    <br /><br />
+    <input type="checkbox" />
+    <br /><br />
+    <input type="checkbox" />
+    <br /><br />
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+	<button id="btn">点我！！</button>
+</body>
+</html>
+<script type="text/javascript">
+
+
+	//当单击按钮的时候，弹出一句话。
+	//事件源：按钮			-->		<button>
+	//事件类型：单击			-->		onclick
+	//执行指令：弹出一句话	-->		alert()
+	
+	//获取到按钮，并取了一个昵称
+	var btn=document.getElementById('btn');
+
+	//事件源.事件类型=执行指令
+	btn.onclick=function(){
+	
+		alert('你好');
+	
+	}
+
+
+</script>

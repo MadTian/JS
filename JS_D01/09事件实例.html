@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+	}
+	
+	li{
+		list-style:none;
+	}
+	#box{
+		width: 100px;
+		height: 100px;
+		background-color: deepskyblue;
+		border: 1px solid #000;
+	}
+</style>
+</head>
+
+<body>
+	<div id="box"></div>
+    <button id="btn1">变宽</button>
+    <button id="btn2">变高</button>
+    <button id="btn3">变色</button>
+    <button id="btn4">变变变</button>
+</body>
+</html>
+<script type="text/javascript">
+
+	//伪代码
+	//当单击btn1时，让box的宽度大于100px
+	//需要：box	btn1
+	var box=document.getElementById('box');
+	
+	var btn1=document.getElementById('btn1');
+	//点btn1，改box的width
+	btn1.onclick=function(){
+	
+		//改box的width，让width大于100px
+		box.style.width='200px';
+		
+	}
+	
+	//当单击btn2时，让box的高度大于100px
+	//需要：box	btn2
+	var btn2=document.getElementById('btn2');
+	//点btn2，改box的height
+	btn2.onclick=function(){
+	
+		box.style.height='200px';	
+	
+	}
+	
+	//当单击btn3时，让box的颜色改变
+	//需要：box	btn3
+	var btn3=document.getElementById('btn3');
+	//点btn3，改box的backgroundColor
+	btn3.onclick=function(){
+	
+		box.style.backgroundColor='deeppink';
+	
+	}
+	
+	//当单击btn4时，让box的宽、高、颜色同时改变
+	//需要：box	btn4
+	var btn4=document.getElementById('btn4');
+	//点btn4，改box的width height backgroundColor
+	btn4.onclick=function(){
+		
+		box.style.width='300px';
+		box.style.height='300px';
+		box.style.backgroundColor='yellowgreen';
+	
+	}
+	
+</script>
+
+
+
+
+
+
+
+

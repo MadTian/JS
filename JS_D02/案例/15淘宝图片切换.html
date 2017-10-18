@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+	}
+	
+	li{
+		list-style:none;
+	}
+	
+	#box{
+		width: 360px;
+		height: 431px;
+		margin: 100px auto 0;
+		border: 1px solid #000;
+	}
+	#up{
+		height: 360px;
+		background: url(img/01big.jpg);
+		border-bottom: 1px solid #000;
+	}
+	.list li{
+		float: left;
+	}
+</style>
+</head>
+
+<body>
+	<div id="box">
+    	<div id="up"></div>
+        <ul class="list">
+        	<li id="li1"><img src="img/01.jpg" /></li>
+            <li id="li2"><img src="img/02.jpg" /></li>
+            <li id="li3"><img src="img/03.jpg" /></li>
+            <li id="li4"><img src="img/04.jpg" /></li>
+            <li id="li5"><img src="img/05.jpg" /></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+	
+	//up是共用的，书写在最上面
+	var up=document.getElementById('up');
+	
+	
+	
+	//当鼠标移入li1时，让up的背景图变成大图1
+	/*var li1=document.getElementById('li1');
+	li1.onmouseenter=function(){
+		
+		up.style.backgroundImage='url(img/01big.jpg)';
+		
+	}*/
+	
+	
+	//当鼠标移入li2时，让up的背景图变成大图2
+	/*var li2=document.getElementById('li2');
+	li2.onmouseenter=function(){
+		
+		up.style.backgroundImage='url(img/02big.jpg)';
+		
+	}*/
+	
+	//当鼠标移入li1时，让up的背景图变成大图1
+	//当鼠标移入li2时，让up的背景图变成大图2
+	//当鼠标移入li3时，让up的背景图变成大图3
+	//当鼠标移入li4时，让up的背景图变成大图4
+	//当鼠标移入li5时，让up的背景图变成大图5
+	//单一（通用）的功能：
+	//当鼠标移入liX时，让up的背景图变成大图Y
+	function fn(data1,data2){
+		
+		//根据这个功能，
+		//函数内部需要：
+		//不断改变的li1 li2 li3 li4 li5的ID字符串		-->		data1
+		//不断改变的大图1 大图2....	的路径字符串		-->		data2
+		
+		
+		
+		var changeLi=document.getElementById(data1);
+		changeLi.onmouseenter=function(){
+			
+			up.style.backgroundImage=data2;
+			
+		}
+	
+	
+	}
+	fn('li1','url(img/01big.jpg)');
+	fn('li2','url(img/02big.jpg)');
+	fn('li3','url(img/03big.jpg)');
+	fn('li4','url(img/04big.jpg)');
+	fn('li5','url(img/05big.jpg)');
+
+</script>
+
+
+
+
+
+
+
+
+
+

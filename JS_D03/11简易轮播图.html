@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <style type="text/css">
+        .box{
+            width: 790px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        .box:hover #prevBtn,.box:hover #nextBtn{
+            display: block;
+        }
+        #prevBtn,#nextBtn{
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            cursor: pointer;
+            display: none;
+        }
+        #prevBtn{
+            left: 10px;
+        }
+        #nextBtn{
+            right: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+
+            //通过改变#banner的src值，实现图片切换
+            //需要3个不同的图片路径
+            var aUrl=['img/img0.jpg','img/img1.jpg','img/img2.jpg'];
+            var banner=document.getElementById('banner');
+            var nextBtn=document.getElementById('nextBtn');
+            var prevBtn=document.getElementById('prevBtn');
+            //因为每一次需要获取的路径都不一样，所以定义一个变量，
+            //用来模拟不断改变的数组下标
+            //初始的下标值，要和页面默认的图片保持一致
+            var i=0;
+
+            //“下一张”切换
+            nextBtn.onclick=function(){
+
+                //在“下一张”里面，需要将i变量做递增
+                i++;
+                //如果 i==3 或者 i>2 了，去数组中就找不到数据，所以一旦出现这种情况，
+                //就强制让i=0，指向首张
+                if(i==3){
+
+                    i=0;
+
+                }
+                // alert(i);
+                //通过递增之后的i变量，去数组中寻找正确的路径
+                // alert(aUrl[i]);
+                //将路径给到banner的src
+                banner.src=aUrl[i];
+
+            }
+
+            //“上一张”切换
+            prevBtn.onclick=function(){
+
+                //在“上一张”里面，需要将i变量做递减
+                i--;
+                //如果 i==-1 或者 i<0 了，去数组中就找不到数据，所以一旦出现这种情况，
+                //就强制让i=2，指向末张
+                if(i<0){
+                    i=2;
+                }
+                // alert(i);
+                //通过递减之后的i变量，去数组中寻找正确的路径
+                // alert(aUrl[i]);
+                //将路径给到banner的src
+                banner.src=aUrl[i];
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="box">
+        <img src="img/img0.jpg" id="banner" />
+        <img src="img/left.gif" id="prevBtn" />
+        <img src="img/right.gif" id="nextBtn" />
+    </div>
+
+</body>
+</html>

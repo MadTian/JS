@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 80px;
+            border: 1px solid #000;
+            background-color: #ccc;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+
+            var btn=document.getElementById('btn');
+            var divs=document.getElementsByTagName('div');
+               
+
+            btn.onclick=function(){
+
+                //让这一堆div背景色统一变成粉色
+
+                //1.要做重复的事
+                for (var i = 0; i < divs.length; i++) {
+                    // divs[i] //代表下标从0开始的每一个DIV元素
+                    divs[i].style.backgroundColor='pink';
+                };
+
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    
+    <button id="btn">刷漆</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+</html>

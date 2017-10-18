@@ -1,0 +1,31 @@
+建立文件后必须加后缀名,如00.html 00.js 00.css
+先ctrl+N新建，再crtl+S保存。
+
+ctrl+K+B		显示或隐藏侧边栏
+ctrl+/		单行注释
+ctrl+shift+/	多行注释
+（解除注释同上）
+alt+shift+数字	分屏操作
+alt+shift+w	标签环绕
+ctrl+G		跳转指定行
+ctrl+F		查找
+Esc		取消
+
+
+Zen-coding技巧：
+必须和ctrl+E配合使用。
+
+html:xt		生成xhtml骨架
+!或者html:5	生成html骨架
+
+div		生成<div></div>
+div#box		生成<div id="box">
+div.box		生成<div class="box">
+div.box1+div.box2	生成<div class="box1">，同级生成<div class="box2">
+ul>li*3		生成一个ul，下面嵌套3个li
+ul>li.li$*3		生成一个ul，下面嵌套3个li，每个li类名分别是li1 li2 li3
+
+没有可视的URL路径查询，要自己手动查找。
+
+
+
